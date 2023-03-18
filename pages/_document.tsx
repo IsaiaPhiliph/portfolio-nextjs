@@ -5,8 +5,8 @@ export default function Document({ __NEXT_DATA__ }: DocumentProps) {
   const currentLocale =
     __NEXT_DATA__.locale ?? i18nextConfig.i18n.defaultLocale;
   return (
-    <Html lang={currentLocale}>
-      <Head title="Pablo Valverde - Portfolio" />
+    <Html title="Pablo Valverde - Portfolio" lang={currentLocale}>
+      <Head />
       <meta
         name="description"
         content="Pablo Valverde Llamas portfolio, showing his skills and projects"
