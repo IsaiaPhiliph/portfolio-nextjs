@@ -6,5 +6,11 @@
   "text-2": "Construye desde webs responsive hasta servidores backend",
   "contact-button": "Contacto",
   "contact-section-text": "Estoy interesado en trabajos de freelance. De todos modos, si tienes alguna petición o pregunta, no dudes en ponerte en contacto conmigo",
-  "contact-section-message-me": "Mándame un mensaje aquí"
+  "contact-section-message-me": "Mándame un mensaje aquí",
+  "terminal": {
+    "line1": "Bienvenido a mi web!",
+    "line2": "Espero que te guste!",
+    "line3": "Si te gusta, no dudes en ponerte en contacto conmigo!",
+    "line4": "Si te gusta, no dudes en compartirla!"
+  }
 }

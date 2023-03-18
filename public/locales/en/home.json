@@ -6,5 +6,11 @@
   "text-2": "He crafts responsive websites where technologies meet creativity",
   "contact-button": "Contact me",
   "contact-section-text": "I'm interested in freelance opportunities. However, if you have other request or question, don't hesitate to contact me",
-  "contact-section-message-me": "Message me here"
+  "contact-section-message-me": "Message me here",
+  "terminal": {
+    "line1": "Welcome to my website!",
+    "line2": "I hope you enjoy it!",
+    "line3": "If you do, make sure to contact me!",
+    "line4": "If you do, make sure to share it!"
+  }
 }

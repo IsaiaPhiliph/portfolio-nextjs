@@ -26,14 +26,16 @@ export default function Home() {
 
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
+  const strings = [
+    t("home:terminal.line1"),
+    t("home:terminal.line2"),
+    t("home:terminal.line3"),
+    t("home:terminal.line4"),
+  ];
+
   useEffect(() => {
     const typed = new Typed(typedContainer.current, {
-      strings: [
-        "Welcome to my website!",
-        "I hope you enjoy it!",
-        "If you do, make sure to contact me!",
-        "If you do, make sure to share it!",
-      ],
+      strings,
       typeSpeed: 20,
       backSpeed: 10,
       backDelay: 1500,
