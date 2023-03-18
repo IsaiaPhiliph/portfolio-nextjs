@@ -114,6 +114,7 @@ export default function ProjectsSection() {
                 src={image}
                 fill
                 className="object-cover"
+                priority
               />
             </div>
             <p className="border-b border-customGray p-2 text-customGray">
