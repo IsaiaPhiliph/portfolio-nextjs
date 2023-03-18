@@ -97,7 +97,7 @@ export default function Home() {
                 <div
                   ref={terminalElement3}
                   className="coding inverse-toggle pr-5 shadow-lg text-gray-100 text-sm subpixel-antialiased 
-              bg-gray-800  pb-6  rounded-lg leading-normal overflow-hidden"
+              bg-gray-700 backdrop-blur-sm bg-opacity-80  pb-6  rounded-lg leading-normal overflow-hidden"
                 >
                   <div className="top py-4 px-5 w-max group mb-2 flex">
                     <button
@@ -152,7 +152,7 @@ export default function Home() {
                     </button>
                   </div>
                   <div className="px-5 flex">
-                    <span className="text-green-400">pablo:~$</span>
+                    <span className="text-green-500">pablo:~$</span>
                     <p
                       ref={typedContainer}
                       className="typing items-center pl-2"
