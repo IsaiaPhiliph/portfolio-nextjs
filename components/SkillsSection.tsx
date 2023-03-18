@@ -1,7 +1,7 @@
-import { Icon } from "@iconify/react";
+import { Icon } from "@iconify-icon/react";
 import { useState } from "react";
 import { useTranslation } from "next-i18next";
-
+import { motion } from "framer-motion";
 interface Skill {
   id: string;
   title: string;
@@ -117,7 +117,7 @@ export default function SkillsSection() {
         <hr className="flex-1 text-primary" />
       </div>
       <div className="flex flex-col lg:flex-row items-start gap-8">
-        <div className="flex flex-1 flex-wrap   gap-4 items-start ">
+        <div className="flex flex-1 justify-center flex-wrap   gap-4 items-start ">
           {skills.map((skill) => (
             <SkillIcon
               key={skill.id}
@@ -160,11 +160,17 @@ const SkillIcon = ({
     <button
       title={skill.title}
       onClick={onClick}
-      className={`bg-white transition-all ring-primary h-18 w-18 p-2 grid place-items-center rounded-sm ${
-        active ? "ring-4 " : "hover:ring-2 "
+      className={`bg-white relative transition-all ring-primary h-18 w-18 p-2 grid place-items-center rounded-sm ${
+        active ? "_ring-4 " : "hover:ring-2 "
       }`}
     >
       <Icon width={48} height={48} icon={skill.icon} />
+      {active && (
+        <motion.div
+          layoutId="skillSelected"
+          className="ring-4 ring-primary rounded-sm absolute -z-10 inset-0"
+        />
+      )}
     </button>
   );
 };

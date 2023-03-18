@@ -1,7 +1,7 @@
 import Link, { LinkProps } from "next/link";
 import { useState } from "react";
 import LanguageSelector from "./LanguageSelector";
-import { Icon } from "@iconify/react";
+import { Icon } from "@iconify-icon/react";
 import { useTranslation } from "next-i18next";
 
 export default function Header() {

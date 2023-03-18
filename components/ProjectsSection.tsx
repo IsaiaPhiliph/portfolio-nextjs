@@ -1,4 +1,4 @@
-import { Icon } from "@iconify/react";
+import { Icon } from "@iconify-icon/react";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import Link from "next/link";
