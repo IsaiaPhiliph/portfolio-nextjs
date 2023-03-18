@@ -5,10 +5,16 @@
   "projects": "proyectos",
   "viewAll": "ver todos",
   "readMore": "leer más",
+  "wip": "En progreso...",
   "header": {
     "home": "inicio",
     "projects": "proyectos",
     "about-me": "sobre-mi",
     "contact": "contacto"
+  },
+  "about-me": {
+    "first-paragraph": "¡Hola! Soy un desarrollador web Full Stack con más de 3 años de experiencia en la creación de soluciones web personalizadas para empresas y clientes individuales. Mi habilidad para trabajar en proyectos desde el inicio hasta la entrega final, me ha permitido ser altamente efectivo en el manejo de tareas complejas y en la búsqueda de soluciones innovadoras para los desafíos que enfrentamos.",
+    "second-paragraph": "Mi conocimiento en lenguajes de programación como HTML, CSS, JavaScript, y frameworks como React, Vue y Angular me permite desarrollar páginas web altamente funcionales y con una excelente experiencia de usuario. Mi experiencia en el manejo de bases de datos como MongoDB, MySQL, Postgres y Firebase, me permite manejar proyectos de gran envergadura con una excelente organización y gestión de datos.",
+    "third-paragraph": "Siempre busco estar actualizado en las últimas tendencias y tecnologías web, lo que me permite estar preparado para abordar cualquier proyecto que se me presente. Soy apasionado y dedicado a mi trabajo, siempre buscando superar las expectativas de mis clientes."
   }
 }

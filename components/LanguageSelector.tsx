@@ -6,12 +6,12 @@ export default function LanguageSelector() {
 
   return (
     <div className="flex gap-2 font-medium">
-      <Link href={"/"} locale="en">
+      <Link href={router.pathname} locale="en">
         <button className={`${router.locale === "en" ? "text-primary " : ""} `}>
           EN
         </button>
       </Link>
-      <Link href="/" locale="es">
+      <Link href={router.pathname} locale="es">
         <button className={`${router.locale === "es" ? "text-primary " : ""} `}>
           ES
         </button>

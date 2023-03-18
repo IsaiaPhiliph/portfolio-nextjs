@@ -5,7 +5,7 @@ export default function Document({ __NEXT_DATA__ }: DocumentProps) {
   const currentLocale =
     __NEXT_DATA__.locale ?? i18nextConfig.i18n.defaultLocale;
   return (
-    <Html lang={currentLocale}>
+    <Html className="min-h-screen flex flex-col" lang={currentLocale}>
       <Head>
         <meta
           name="description"
@@ -13,7 +13,7 @@ export default function Document({ __NEXT_DATA__ }: DocumentProps) {
         />
       </Head>
 
-      <body>
+      <body className="flex-1 flex flex-col">
         <Main />
         <NextScript />
       </body>

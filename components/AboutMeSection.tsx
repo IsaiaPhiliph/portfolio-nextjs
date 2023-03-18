@@ -14,16 +14,9 @@ export default function AboutMeSection() {
   const [typed, setTyped] = useState<Typed>();
 
   const content = `
-    <p>Hello, I&apos;m Pablo!</p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ipsam similique molestiae nobis? Praesentium maiores molestiae accusantium eveniet! Expedita quidem odit enim. Optio praesentium consequuntur ullam harum ab assumenda vitae.
-    </p>
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis commodi veritatis fugiat quas rerum. Autem esse tenetur accusantium. Nobis consequatur sint iste impedit aperiam enim necessitatibus porro inventore nostrum? Provident!
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit in, assumenda necessitatibus possimus consequatur placeat. Velit at blanditiis harum inventore unde voluptate, ut, voluptates, laborum molestiae in itaque labore pariatur.
-    </p>
+    <p>${t("about-me.first-paragraph")}</p>
+    <p>${t("about-me.second-paragraph")}</p>
+    <p>${t("about-me.third-paragraph")}</p>
   `;
 
   useEffect(() => {
@@ -39,7 +32,7 @@ export default function AboutMeSection() {
     return () => {
       typed.destroy();
     };
-  }, []);
+  }, [content]);
 
   const variants: { [name: string]: Variants } = {
     container: {

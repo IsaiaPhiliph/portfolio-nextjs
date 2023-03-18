@@ -51,10 +51,11 @@ export default function Home() {
     <>
       <Head>
         <title>Pablo Valverde - Portfolio</title>
+        <link rel="shortcut icon" href="/favicon.png" />
       </Head>
       <Layout>
         <section className="py-16 px-8 container mx-auto">
-          <div className="flex flex-col gap-4 md:flex-row">
+          <div className="flex flex-col gap-8 md:flex-row">
             <div className="flex flex-col flex-1 gap-8">
               <h1 className="text-4xl">
                 <span className="font-medium">{t("home:big-text-1")}</span>
