@@ -124,11 +124,12 @@ export default function ProjectsSection() {
               <p className="text-customGray">{description}</p>
             </div>
             <div className="flex flex-wrap p-4 gap-4">
-              {links?.map((link) => (
+              {links?.map((link, i) => (
                 <AnchorButton
                   icon={link.icon}
                   variant={link.variant}
                   href={link.href}
+                  key={i}
                 >
                   {link.text}
                 </AnchorButton>

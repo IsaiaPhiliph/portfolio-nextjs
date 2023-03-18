@@ -158,7 +158,6 @@ const SkillIcon = ({
 }) => {
   return (
     <button
-      aria-selected={active}
       title={skill.title}
       onClick={onClick}
       className={`bg-white transition-all ring-primary h-18 w-18 p-2 grid place-items-center rounded-sm ${
