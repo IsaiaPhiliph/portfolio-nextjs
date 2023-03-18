@@ -13,7 +13,7 @@ export default function Document({ __NEXT_DATA__ }: DocumentProps) {
         />
       </Head>
 
-      <body className={`bg-background text-white`}>
+      <body>
         <Main />
         <NextScript />
       </body>

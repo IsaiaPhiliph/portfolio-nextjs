@@ -12,6 +12,7 @@ specifiers:
   i18next: ^22.4.12
   next: 13.2.4
   next-i18next: ^13.2.2
+  next-themes: ^0.2.1
   postcss: ^8.4.21
   prop-types: ^15.5.4
   react: 18.2.0
@@ -20,6 +21,7 @@ specifiers:
   react-type-animation: ^2.1.2
   tailwindcss: ^3.2.7
   typescript: 5.0.2
+  usehooks-ts: ^2.9.1
 
 dependencies:
   '@types/node': 18.15.3
@@ -31,12 +33,14 @@ dependencies:
   i18next: 22.4.12
   next: 13.2.4_biqbaboplfbrettd7655fr4n2y
   next-i18next: 13.2.2_kunig3zwfzuoyjmo2vxzyuf2na
+  next-themes: 0.2.1_ld2jel3hspngo3u5lti2kgl2sq
   prop-types: 15.8.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-i18next: 12.2.0_ifcy7d6sq4oet2tbyvl27swb2m
   react-type-animation: 2.1.2_v2m5e27vhdewzwhryxwfaorcca
   typescript: 5.0.2
+  usehooks-ts: 2.9.1_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
   '@iconify-icon/react': 1.0.7_react@18.2.0
@@ -1814,6 +1818,18 @@ packages:
       react-i18next: 12.2.0_ifcy7d6sq4oet2tbyvl27swb2m
     dev: false
 
+  /next-themes/0.2.1_ld2jel3hspngo3u5lti2kgl2sq:
+    resolution: {integrity: sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 13.2.4_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /next/13.2.4_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-g1I30317cThkEpvzfXujf0O4wtaQHtDCLhlivwlTJ885Ld+eOgcz7r3TGQzeU+cSRoNHtD8tsJgzxVdYojFssw==}
     engines: {node: '>=14.6.0'}
@@ -2542,6 +2558,17 @@ packages:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
       punycode: 2.3.0
+    dev: false
+
+  /usehooks-ts/2.9.1_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-2FAuSIGHlY+apM9FVlj8/oNhd+1y+Uwv5QNkMQz1oSfdHk4PXo1qoCw9I5M7j0vpH8CSWFJwXbVPeYDjLCx9PA==}
+    engines: {node: '>=16.15.0', npm: '>=8'}
+    peerDependencies:
+      react: ^16.8.0  || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0  || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /util-deprecate/1.0.2:

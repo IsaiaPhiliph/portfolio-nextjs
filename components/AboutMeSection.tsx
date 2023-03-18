@@ -15,7 +15,7 @@ export default function AboutMeSection() {
         <hr className="flex-1 text-primary" />
       </div>
       <div className="flex flex-col gap-4 lg:flex-row items-center">
-        <div className="flex-1 text-customGray flex flex-col gap-4">
+        <div className="flex-1 dark:text-customGray flex flex-col gap-4">
           <p>Hello, I&apos;m Pablo!</p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate

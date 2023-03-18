@@ -1,5 +1,5 @@
 import { Icon } from "@iconify-icon/react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import Link from "next/link";
@@ -85,7 +85,7 @@ export default function ProjectsSection() {
     },
   ];
 
-  const variants = {
+  const variants: { [name: string]: Variants } = {
     container: {
       hidden: {
         opacity: 0,
@@ -132,6 +132,7 @@ export default function ProjectsSection() {
         {projects.map(({ image, name, tags, links, description }, i) => (
           <motion.div
             key={i}
+            whileHover={{ scale: 1.03 }}
             variants={variants.item}
             className="flex border border-customGray flex-1 flex-col"
           >
@@ -144,12 +145,12 @@ export default function ProjectsSection() {
                 priority
               />
             </div>
-            <p className="border-b border-customGray p-2 text-customGray">
+            <p className="border-b border-customGray p-2 dark:text-customGray">
               {tags}
             </p>
             <div className="flex p-4 flex-1 flex-col gap-4">
               <p className="text-2xl font-semibold">{name}</p>
-              <p className="text-customGray">{description}</p>
+              <p className="dark:text-customGray">{description}</p>
             </div>
             <div className="flex flex-wrap p-4 gap-4">
               {links?.map((link, i) => (

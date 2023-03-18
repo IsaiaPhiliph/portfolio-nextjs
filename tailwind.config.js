@@ -11,11 +11,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#C778DD",
+        // primary: "#C778DD", // purple
+        primary: "#3178c6", // typescript color
         background: "#282C33",
         customGray: "#ABB2BF",
       },
     },
   },
+  darkMode: "class",
   plugins: [],
 };
