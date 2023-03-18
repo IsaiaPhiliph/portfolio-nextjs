@@ -1,4 +1,5 @@
 import { Icon } from "@iconify-icon/react";
+import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import Link from "next/link";
@@ -83,6 +84,25 @@ export default function ProjectsSection() {
       image: "/images/projects/preguntabot.png",
     },
   ];
+
+  const variants = {
+    container: {
+      hidden: {
+        opacity: 0,
+      },
+      show: {
+        opacity: 1,
+        transition: {
+          staggerChildren: 0.1,
+        },
+      },
+    },
+    item: {
+      hidden: { opacity: 0, y: -100 },
+      show: { opacity: 1, y: 0 },
+    },
+  };
+
   return (
     <section className="py-16 px-8 container mx-auto">
       <div className="flex gap-8 justify-between items-center pb-12">
@@ -102,10 +122,17 @@ export default function ProjectsSection() {
           />
         </Link>
       </div>
-      <div className="flex flex-col lg:flex-row gap-4">
+      <motion.div
+        variants={variants.container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="flex flex-col lg:flex-row gap-4"
+      >
         {projects.map(({ image, name, tags, links, description }, i) => (
-          <div
+          <motion.div
             key={i}
+            variants={variants.item}
             className="flex border border-customGray flex-1 flex-col"
           >
             <div className="relative aspect-video border-b border-customGray">
@@ -136,9 +163,9 @@ export default function ProjectsSection() {
                 </AnchorButton>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
       <div className="flex justify-center pt-8">
         <AnchorButton variant="primary" href={"/projects"}>
           {t("viewAll")}
