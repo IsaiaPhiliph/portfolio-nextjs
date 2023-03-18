@@ -7,7 +7,6 @@ export default function Document({ __NEXT_DATA__ }: DocumentProps) {
   return (
     <Html lang={currentLocale}>
       <Head>
-        <title>Pablo Valverde - Portfolio</title>
         <meta
           name="description"
           content="Pablo Valverde Llamas portfolio, showing his skills and projects"
