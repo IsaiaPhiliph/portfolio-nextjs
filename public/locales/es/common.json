@@ -1,0 +1,14 @@
+{
+  "skill": "habilidad",
+  "skills": "habilidades",
+  "project": "proyecto",
+  "projects": "proyectos",
+  "viewAll": "ver todos",
+  "readMore": "leer más",
+  "header": {
+    "home": "inicio",
+    "projects": "proyectos",
+    "about-me": "sobre-mi",
+    "contact": "contacto"
+  }
+}

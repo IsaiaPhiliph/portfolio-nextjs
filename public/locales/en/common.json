@@ -1,0 +1,14 @@
+{
+  "skill": "skill",
+  "skills": "skills",
+  "project": "project",
+  "projects": "projects",
+  "viewAll": "view all",
+  "readMore": "read more",
+  "header": {
+    "home": "home",
+    "projects": "projects",
+    "about-me": "about-me",
+    "contact": "contact"
+  }
+}
