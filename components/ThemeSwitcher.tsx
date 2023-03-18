@@ -1,5 +1,5 @@
 import { Icon } from "@iconify-icon/react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, Variants, motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -8,27 +8,57 @@ export default function ThemeSwitcher() {
 
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
-  const toggle = () => (theme == "dark" ? setTheme("light") : setTheme("dark"));
-
-  console.log(theme, systemTheme);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
+  const variants: { [name: string]: Variants } = {
+    button: {
+      initial: {
+        opacity: 0,
+        scale: 0,
+      },
+      animate: {
+        opacity: 1,
+        scale: 1,
+      },
+      exit: {
+        opacity: 0,
+        scale: 0,
+      },
+    },
+  };
+
   if (!mounted) {
-    return null;
+    return (
+      <div className="min-w-[24px]">
+        <AnimatePresence mode="popLayout">
+          <motion.button
+            variants={variants.button}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            onClick={() => setTheme("light")}
+            className="grid place-items-center"
+          >
+            <Icon width={24} icon="material-symbols:light-mode-outline-sharp" />
+          </motion.button>
+        </AnimatePresence>
+      </div>
+    );
   }
 
   return (
-    <>
+    <div className="min-w-[24px]">
       <AnimatePresence mode="popLayout">
-        {theme === "dark" && (
+        {currentTheme === "light" && (
           <motion.button
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -50 }}
-            onClick={toggle}
+            variants={variants.button}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            onClick={() => setTheme("dark")}
             className="grid place-items-center"
           >
             <Icon width={24} icon="material-symbols:dark-mode-outline" />
@@ -36,18 +66,19 @@ export default function ThemeSwitcher() {
         )}
       </AnimatePresence>
       <AnimatePresence mode="popLayout">
-        {theme !== "dark" && (
+        {currentTheme === "dark" && (
           <motion.button
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -50 }}
-            onClick={toggle}
+            variants={variants.button}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            onClick={() => setTheme("light")}
             className="grid place-items-center"
           >
             <Icon width={24} icon="material-symbols:light-mode-outline-sharp" />
           </motion.button>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 }

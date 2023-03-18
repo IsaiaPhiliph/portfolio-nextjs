@@ -225,7 +225,7 @@ const SkillIcon = ({
       className={`${
         active
           ? "text-primary"
-          : "dark:text-customGray text-gray-700 hover:text-primary"
+          : "dark:text-customGray text-gray-700 hover:text-primary dark:hover:text-primary"
       }  relative transition-all ring-primary h-18 w-18 p-2 grid place-items-center rounded-sm`}
     >
       <Icon width={48} height={48} icon={skill.monoIcon} />
