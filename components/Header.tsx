@@ -5,11 +5,41 @@ import { Icon } from "@iconify-icon/react";
 import { useTranslation } from "next-i18next";
 import { AnimatePresence, motion } from "framer-motion";
 import ThemeSwitcher from "./ThemeSwitcher";
+import { useRouter } from "next/router";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const router = useRouter();
+
   const { t } = useTranslation("common");
+
+  const links = [
+    {
+      title: t("header.home"),
+      href: "/",
+    },
+    {
+      title: t("header.projects"),
+      href: "/projects",
+    },
+    {
+      title: t("header.about-me"),
+      href: "/about-me",
+    },
+    {
+      title: t("header.contact"),
+      href: "/contact",
+    },
+  ];
+
+  const Links = links.map(({ title, href }) => (
+    <>
+      <LinkWithHashtag active={router.pathname === href} href={href}>
+        {title}
+      </LinkWithHashtag>
+    </>
+  ));
 
   return (
     <header className="flex flex-col lg:flex-row pb-2 gap-4 px-8 pt-8 container mx-auto justify-between">
@@ -49,16 +79,7 @@ export default function Header() {
               : "hidden"
           } gap-8 py-4 flex-col items-start`}
         >
-          <LinkWithHashtag href="/">{t("header.home")}</LinkWithHashtag>
-          <LinkWithHashtag href="/projects">
-            {t("header.projects")}
-          </LinkWithHashtag>
-          <LinkWithHashtag href="/about-me">
-            {t("header.about-me")}
-          </LinkWithHashtag>
-          <LinkWithHashtag href="/contact">
-            {t("header.contact")}
-          </LinkWithHashtag>
+          {...Links}
           <div className="flex gap-8 items-center">
             <LanguageSelector />
             <ThemeSwitcher />
@@ -67,16 +88,7 @@ export default function Header() {
       </div>
       <div className="hidden lg:block">
         <div className={`flex gap-8 py-4`}>
-          <LinkWithHashtag href="/">{t("header.home")}</LinkWithHashtag>
-          <LinkWithHashtag href="/projects">
-            {t("header.projects")}
-          </LinkWithHashtag>
-          <LinkWithHashtag href="/about-me">
-            {t("header.about-me")}
-          </LinkWithHashtag>
-          <LinkWithHashtag href="/contact">
-            {t("header.contact")}
-          </LinkWithHashtag>
+          {...Links}
           <LanguageSelector />
           <ThemeSwitcher />
         </div>
@@ -85,11 +97,23 @@ export default function Header() {
   );
 }
 
-function LinkWithHashtag(props: { children: React.ReactNode } & LinkProps) {
+function LinkWithHashtag({
+  children,
+  active,
+  ...rest
+}: { children: React.ReactNode; active: boolean } & LinkProps) {
   return (
-    <Link {...props} className="font-medium whitespace-nowrap">
-      <span className="text-primary">#</span>
-      {props.children}
-    </Link>
+    <div className="relative">
+      <Link {...rest} className="font-medium whitespace-nowrap">
+        <span className="text-primary">#</span>
+        {children}
+      </Link>
+      {active && (
+        <motion.hr
+          layoutId="link_underline"
+          className="border-primary border-1 absolute left-2.5 right-0"
+        />
+      )}
+    </div>
   );
 }

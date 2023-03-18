@@ -1,3 +1,4 @@
+import useIsMounted from "@/hooks/useIsMounted";
 import { Icon } from "@iconify-icon/react";
 import { motion, Variants } from "framer-motion";
 import { useTranslation } from "next-i18next";
@@ -19,6 +20,8 @@ interface Project {
 }
 
 export default function ProjectsSection() {
+  const { mounted } = useIsMounted();
+
   const { t } = useTranslation("common");
   const projects: Project[] = [
     {
@@ -76,7 +79,7 @@ export default function ProjectsSection() {
       links: [
         {
           text: "Github",
-          href: "",
+          href: "https://github.com/IsaiaPhiliph/preguntabot",
           icon: "fe:github",
           variant: "gray",
         },
@@ -103,6 +106,22 @@ export default function ProjectsSection() {
     },
   };
 
+  function ProjectsWrapper({ children }: { children: React.ReactNode }) {
+    return mounted ? (
+      <motion.div
+        variants={variants.container}
+        initial={"hidden"}
+        whileInView="show"
+        viewport={{ once: true }}
+        className="flex flex-col lg:flex-row gap-4"
+      >
+        {children}
+      </motion.div>
+    ) : (
+      <div className="flex flex-col lg:flex-row gap-4">{children}</div>
+    );
+  }
+
   return (
     <section className="py-16 px-8 container mx-auto">
       <div className="flex gap-8 justify-between items-center pb-12">
@@ -122,17 +141,12 @@ export default function ProjectsSection() {
           />
         </Link>
       </div>
-      <motion.div
-        variants={variants.container}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        className="flex flex-col lg:flex-row gap-4"
-      >
+      <ProjectsWrapper>
         {projects.map(({ image, name, tags, links, description }, i) => (
           <motion.div
             key={i}
             whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
             variants={variants.item}
             className="flex border border-customGray flex-1 flex-col"
           >
@@ -159,6 +173,7 @@ export default function ProjectsSection() {
                   variant={link.variant}
                   href={link.href}
                   key={i}
+                  target="_blank"
                 >
                   {link.text}
                 </AnchorButton>
@@ -166,7 +181,7 @@ export default function ProjectsSection() {
             </div>
           </motion.div>
         ))}
-      </motion.div>
+      </ProjectsWrapper>
       <div className="flex justify-center pt-8">
         <AnchorButton variant="primary" href={"/projects"}>
           {t("viewAll")}

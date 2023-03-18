@@ -21,6 +21,7 @@ specifiers:
   react-type-animation: ^2.1.2
   sharp: ^0.31.3
   tailwindcss: ^3.2.7
+  typed.js: ^2.0.132
   typescript: 5.0.2
   usehooks-ts: ^2.9.1
 
@@ -41,6 +42,7 @@ dependencies:
   react-i18next: 12.2.0_ifcy7d6sq4oet2tbyvl27swb2m
   react-type-animation: 2.1.2_v2m5e27vhdewzwhryxwfaorcca
   sharp: 0.31.3
+  typed.js: 2.0.132
   typescript: 5.0.2
   usehooks-ts: 2.9.1_biqbaboplfbrettd7655fr4n2y
 
@@ -2757,6 +2759,10 @@ packages:
       call-bind: 1.0.2
       for-each: 0.3.3
       is-typed-array: 1.1.10
+    dev: false
+
+  /typed.js/2.0.132:
+    resolution: {integrity: sha512-6lWs7dqLtfvZZtNLUJte5RYkT0rj2ACOwkeWghxSnyChSu/ZHX2NlT1KHc2daqVx3073wLIJYlCL2aHcjWYCAQ==}
     dev: false
 
   /typescript/5.0.2:

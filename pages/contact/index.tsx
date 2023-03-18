@@ -7,7 +7,131 @@ export default function ContactPage() {
 
   return (
     <Layout>
-      <h1>Contact</h1>
+      <section className="py-16 px-8 container mx-auto">
+        <h1 className="mb-8 text-3xl">Contact</h1>
+        <div className="flex flex-col gap-4">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            itaque! Eos recusandae error ex distinctio. Modi laborum molestiae,
+            dicta laboriosam nobis quidem, quisquam molestias ducimus veritatis
+            optio cupiditate est perferendis!
+          </p>
+        </div>
+      </section>
     </Layout>
   );
 }
