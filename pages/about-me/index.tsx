@@ -11,7 +11,7 @@ export default function AboutMePage() {
     <>
       <Head>
         <title>
-          Pablo Valverde - {firstChatToUpper(t("common:header.about-me"))}
+          {`Pablo Valverde - ${firstChatToUpper(t("common:header.about-me"))}`}
         </title>
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>

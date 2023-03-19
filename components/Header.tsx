@@ -1,11 +1,12 @@
 import Link, { LinkProps } from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import LanguageSelector from "./LanguageSelector";
 import { Icon } from "@iconify-icon/react";
 import { useTranslation } from "next-i18next";
 import { AnimatePresence, motion } from "framer-motion";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { useRouter } from "next/router";
+import { useOnClickOutside } from "usehooks-ts";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,6 +14,14 @@ export default function Header() {
   const router = useRouter();
 
   const { t } = useTranslation("common");
+
+  const mobileMenu = useRef<HTMLDivElement>(null);
+
+  useOnClickOutside(mobileMenu, () => {
+    if (menuOpen) {
+      setMenuOpen(false);
+    }
+  });
 
   const links = [
     {
@@ -42,9 +51,12 @@ export default function Header() {
   ));
 
   return (
-    <header className="flex flex-col lg:flex-row pb-2 gap-4 px-8 pt-8 container mx-auto justify-between">
-      <div className="flex justify-between items-center">
-        <div className="flex items-center gap-2">
+    <header
+      ref={mobileMenu}
+      className="flex flex-col lg:flex-row pb-2 lg:gap-4 lg:px-8 pt-8 container mx-auto justify-between"
+    >
+      <div className="flex px-8 lg:px-0 justify-between items-center">
+        <Link href="/" className="flex items-center gap-2">
           <svg
             className="flex-shrink-0"
             width="18"
@@ -60,10 +72,10 @@ export default function Header() {
               fill="currentColor"
             />
           </svg>
-          <span className="font-bold text-xl whitespace-nowrap">
+          <span className="font-bold text-regular lg:text-xl whitespace-nowrap">
             Pablo Valverde Llamas
           </span>
-        </div>
+        </Link>
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="p-2 lg:hidden grid place-items-center"
@@ -71,21 +83,30 @@ export default function Header() {
           <Icon width={24} icon="ic:baseline-menu" />
         </button>
       </div>
-      <div className="relative lg:hidden">
-        <div
-          className={`${
-            menuOpen
-              ? "flex absolute dark:bg-background bg-white bg-opacity-80 backdrop-blur-sm dark:bg-opacity-95 w-full z-10"
-              : "hidden"
-          } gap-8 py-4 flex-col items-start`}
-        >
-          {...Links}
-          <div className="flex gap-8 items-center">
-            <LanguageSelector />
-            <ThemeSwitcher />
-          </div>
-        </div>
-      </div>
+      <AnimatePresence mode="popLayout">
+        {menuOpen && (
+          <motion.div
+            initial={{ y: -100, x: 0, opacity: 0, zIndex: 10 }}
+            animate={{ y: 0, x: 0, opacity: 1, zIndex: 10 }}
+            exit={{ x: -400, opacity: 0, zIndex: 10 }}
+            className="relative lg:hidden"
+          >
+            <div
+              className={`${
+                menuOpen
+                  ? "flex absolute px-8 border-b-4 shadow-lg border-b-primary dark:bg-background bg-white bg-opacity-80 backdrop-blur-sm dark:bg-opacity-95 w-full z-10"
+                  : "hidden"
+              } gap-8 py-8 flex-col items-start`}
+            >
+              {...Links}
+              <div className="flex gap-8 items-center">
+                <LanguageSelector />
+                <ThemeSwitcher />
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div className="hidden lg:block">
         <div className={`flex gap-8 py-4`}>
           {...Links}

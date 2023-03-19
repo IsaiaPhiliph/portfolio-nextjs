@@ -11,7 +11,7 @@ export default function ContactPage() {
     <>
       <Head>
         <title>
-          Pablo Valverde - {firstChatToUpper(t("common:header.contact"))}
+          {`Pablo Valverde - ${firstChatToUpper(t("common:header.contact"))}`}
         </title>
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>

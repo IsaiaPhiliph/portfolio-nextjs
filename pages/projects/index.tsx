@@ -11,7 +11,7 @@ export default function ProjectsPage() {
     <>
       <Head>
         <title>
-          Pablo Valverde - {firstChatToUpper(t("common:header.projects"))}
+          {`Pablo Valverde - ${firstChatToUpper(t("common:header.projects"))}`}
         </title>
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
