@@ -7,3 +7,4 @@
 - Mejorar texto de contacto
 - Hacer el texto de las habilidades, y linkarlas a proyectos
 - Mejorar texto de hero section
+- Deshabilitar animaciones en movil

@@ -83,30 +83,23 @@ export default function Header() {
           <Icon width={24} icon="ic:baseline-menu" />
         </button>
       </div>
-      <AnimatePresence mode="popLayout">
-        {menuOpen && (
-          <motion.div
-            initial={{ y: -100, x: 0, opacity: 0, zIndex: 10 }}
-            animate={{ y: 0, x: 0, opacity: 1, zIndex: 10 }}
-            exit={{ x: -400, opacity: 0, zIndex: 10 }}
-            className="relative lg:hidden"
+      {menuOpen && (
+        <div className="relative lg:hidden">
+          <div
+            className={`${
+              menuOpen
+                ? "flex absolute px-8 border-b-4 shadow-lg border-b-primary dark:bg-background bg-white bg-opacity-80 backdrop-blur-sm dark:bg-opacity-95 w-full z-10"
+                : "hidden"
+            } gap-8 py-8 flex-col items-start`}
           >
-            <div
-              className={`${
-                menuOpen
-                  ? "flex absolute px-8 border-b-4 shadow-lg border-b-primary dark:bg-background bg-white bg-opacity-80 backdrop-blur-sm dark:bg-opacity-95 w-full z-10"
-                  : "hidden"
-              } gap-8 py-8 flex-col items-start`}
-            >
-              {...Links}
-              <div className="flex gap-8 items-center">
-                <LanguageSelector />
-                <ThemeSwitcher />
-              </div>
+            {...Links}
+            <div className="flex gap-8 items-center">
+              <LanguageSelector />
+              <ThemeSwitcher />
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+        </div>
+      )}
       <div className="hidden lg:block">
         <div className={`flex gap-8 py-4`}>
           {...Links}
